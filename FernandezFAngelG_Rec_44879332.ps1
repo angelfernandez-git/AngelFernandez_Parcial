@@ -1,10 +1,13 @@
-$procesos = Get-Process
-
-$limite = [int](Read-Host "Introducir una cantidad limite para los procesos")
-
-if (($procesos.Count -gt $limite) -and ($procesos.Count -lt 500)) {
-    Write-Host "La cantidad de procesos ($($procesos.Count)) es mayor que los $limite ingresados por el usuario y menor que 500."
-}
-else {
-    Write-Host "La condicion no se cumple."
-}
+$numero=read-host "Ingrese un numero"
+for ($i=1;$i -le $numero; $i++)
+	{
+		if($i % 2 -eq 0)
+			{
+			write-host (Get-Date)"El numero $i es Par "
+			}
+		else 
+			{
+			write-host (Get-Date)"El numero $i es Impar "
+			}
+		
+	}
